@@ -1,0 +1,173 @@
+$yellow: #E8C300 ;
+$grey: #E5E5E5;
+$black: #000000;
+$white: #fff;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+.page-1 {
+    width: 100%;
+    height: 800px;
+    background-image: url(/assets/background/bg-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    header{
+        display: flex;
+        width: 100%;
+        height: max-content;
+        justify-content: space-around;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        color: $white;
+        line-height: 18px;
+        text-align: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    &__left {
+        display: flex;
+        justify-content: space-between;
+        width: 530px;
+        height: 100px;
+        align-items: center;
+        &-menu {
+            width: 130px;
+            height: 100px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 530px;
+        height: 100px;
+        &-menu {
+            width: 130px;
+            height: 100px;
+        }
+    }
+
+    &__logo {
+            height: 150px;
+            width: 150px;
+            background-image: url(/assets/img/logo.png);
+            background-repeat: no-repeat;
+            background-position: center;
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        margin: 0 auto;
+        padding-top: 325px;
+    }
+    &__time{
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: center;
+        transform: rotate(-90deg);
+    }
+    &__text{
+        h3{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.5em;
+            text-align: center;
+        }
+        h1{
+            font-family: 'Dosis', sans-serif;
+            font-size: 96px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 30px;
+        }
+        &-line{
+            width: 60px;
+            height: 5px;
+            background-color: $yellow;
+            border-radius: 50px;
+            text-align: center;
+            margin: 20px auto;
+        }
+        &-buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 440px;
+            height: 60px;
+            align-items: center;
+            margin: 30px auto;
+            button {
+                box-sizing: border-box;
+                background-color: transparent;
+                outline: none;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 5px;
+                color: $white;
+                width: 200px;
+                height: 60px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 14px;
+            }
+            button:hover{
+                background-color: $yellow;
+                border: none;
+            }
+        }
+        
+    }
+    &__media{
+        width: 60px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 80px;
+        &-icon{
+            height: 60px;
+            width: 60px;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .facebook {
+            background-image: url(/assets/media/facebook.png);
+        }
+        .facebook:hover{
+            background-image: url(/assets/media/facebook-active.png);
+        }
+        .twitter{
+            background-image: url(/assets/media/twitter.png);
+        }
+        .twitter:hover{
+            background-image: url(/assets/media/twitter-active.png);
+        }
+        .instagram{
+            background-image: url(/assets/media/instagram.png);
+        }
+        .instagram:hover{
+            background-image: url(/assets/media/instagram-active.png);
+        }
+    }
+}

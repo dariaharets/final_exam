@@ -9,44 +9,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/normalize.css">
 </head>
 <body>
-    <div class="wrapper">
+<div class="wrapper">
 
-    
     <div class="page-1">
         <header>
-            <div class="page-1__left">
-                <div class="page-1__left-menu">
-                <span>HOME</span>
-                </div>
-                <div class="page-1__left-menu">
-                    <span>ABOUT</span>
-                </div>
-                <div class="page-1__left-menu">
-                    <span>TEAM</span>
-                </div>
-                <div class="page-1__left-menu">
-                    <span>BOOKING</span>
-                </div>
-            </div>
-            <div class="page-1__logo">
 
+            <div class="page-1__left">
+                <a href="#">
+                    <div class="page-1__left-menu">
+                    <span>HOME</span>
+                    </div>
+                </a>
+                <a href="#page-2">
+                    <div class="page-1__left-menu">
+                        <span>ABOUT</span>
+                    </div>
+                </a>
+                <a href="#page-3">
+                    <div class="page-1__left-menu">
+                        <span>TEAM</span>
+                    </div>
+                </a>
+                <a href="#page-4">
+                    <div class="page-1__left-menu">
+                        <span>BOOKING</span>
+                    </div>
+                </a>
+                
             </div>
+
+            <a href="#"><div class="page-1__logo">
+            </div></a>
+
             <div class="page-1__right">
-                <div class="page-1__right-menu">
+                <a href="#page-6">
+                   <div class="page-1__right-menu">
                     <span>MENU</span>
-                </div>
-                <div class="page-1__right-menu">
-                    <span>GALERIE</span>
-                </div>
-                <div class="page-1__right-menu">
-                    <span>EVENTS</span>
-                </div>
-                <div class="page-1__right-menu">
-                    <span>CONTACT</span>
-                </div>
+                </div> 
+                </a>
+                <a href="#gallery">
+                    <div class="page-1__right-menu">
+                        <span>GALERIE</span>
+                    </div>
+                </a>
+                <a href="#page-7">
+                    <div class="page-1__right-menu">
+                        <span>EVENTS</span>
+                    </div>
+                </a>
+                <a href="#page-8">
+                    <div class="page-1__right-menu">
+                        <span>CONTACT</span>
+                    </div>
+                </a>
+                
             </div>
+
         </header>
 
         <div class="page-1__content">
@@ -58,20 +82,28 @@
                 <h1>HUNGRY PEOPLE</h1>
                 <div class="page-1__text-line"></div>
                 <div class="page-1__text-buttons">
-                    <button>BOOK TABLE</button>
-                    <button>EXPLORE</button>
+                    <a href="#page-4"><button>BOOK TABLE</button></a>
+                    <a href="#page-6"><button>EXPLORE</button></a>
                 </div>
             </div>
             <div class="page-1__media">
-                <div class="facebook"></div>
-                <div class="twitter"></div>
-                <div class="instagram"></div>
+                <a href="https://www.facebook.com">
+                    <div class="page-1__media-icon facebook"></div>
+                </a>
+                <a href="https://twitter.com">
+                    <div class="page-1__media-icon twitter"></div>
+                </a>
+                <a href="https://www.instagram.com">
+                    <div class="page-1__media-icon instagram"></div>
+                </a>
+                
             </div>
         </div>
         <div class="scroll"></div>
+
     </div>
 
-    <div class="page-2">
+    <div id="page-2" class="page-2">
         <div class="page-2__text">
             <h2>ABOUT US</h2>
             <div class="page-2__text-line"></div>
@@ -90,7 +122,7 @@
         </div>
     </div>
 
-    <div class="page-3">
+    <div id="page-3" class="page-3">
         <h3>OUR TEAM</h3>
         <div class="page-3__image">
             <div class="page-3__image-picture"></div>
@@ -109,7 +141,7 @@
             </p>
     </div>
 
-    <div class="page-4">
+    <div id="page-4" class="page-4">
         <div class="page-3__text">
             <h2>BOOK A TABLE</h2>
             <div class="page-2 text__line"></div>
@@ -153,7 +185,7 @@
         <p>Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729 131 637/+40 726 458 782</p>
     </div>
 
-    <div class="page-5">
+    <div id="page-5" class="page-5">
         <h3>SPECIALTIES</h3>
         <div class="page-5__image">
             <div class="page-5__image-picture"></div>
@@ -171,7 +203,7 @@
             </p>
     </div>
 
-    <div class="page-6">
+    <div id="page-6" class="page-6">
         <h2>DELICIOUS MENU</h2>
         <div class="page-5__text-line"></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
@@ -192,7 +224,7 @@
         </div>
     </div>
 
-    <div class="page-7">
+    <div id="page-7" class="page-7">
         <h3>PRIVATE EVENTS</h3>
         <div class="page-7__left">
             <div class="page-7__left-black"></div>
@@ -208,14 +240,14 @@
             </div>
         </a>
     </div>
-    <div class="page-7__gallery">
+    <div id="gallery" class="page-7__gallery">
         <div class="page-7__gallery-1"></div>
         <div class="page-7__gallery-2"></div>
         <div class="page-7__gallery-3"></div>
         <div class="page-7__gallery-4"></div>
     </div>
 
-    <div class="page-8">
+    <div id="page-8" class="page-8">
         <h2>CONTACT</h2>
         <div class="page-8__text-line line"></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
@@ -251,5 +283,6 @@
     </div>
 
 </div>
+
 </body>
 </html>
