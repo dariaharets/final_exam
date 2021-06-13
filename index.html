@@ -80,7 +80,7 @@
             <div class="page-1__text">
                 <h3>RESTAURANT</h3>
                 <h1>HUNGRY PEOPLE</h1>
-                <div class="page-1__text-line"></div>
+                <div class="page-1__text-line line"></div>
                 <div class="page-1__text-buttons">
                     <a href="#page-4"><button>BOOK TABLE</button></a>
                     <a href="#page-6"><button>EXPLORE</button></a>
@@ -99,59 +99,66 @@
                 
             </div>
         </div>
-        <div class="scroll"></div>
-
+        <a href="#page-2">
+            <div class="scroll"></div>
+        </a>
     </div>
 
     <div id="page-2" class="page-2">
         <div class="page-2__text">
             <h2>ABOUT US</h2>
-            <div class="page-2__text-line"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
-
+            <div class="page-2__text-line line"></div>
+            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
             </p>
 
-            <p>Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. 
+            <p class="simple-text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. 
                 Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. 
                 Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
             </p>
         </div>
         <div class="page-2__image">
             <div class="page-2__image-picture"></div>
-            <div class="page-2__image-figure"></div>
+            <div class="page-2__image-figure figure"></div>
         </div>
     </div>
 
     <div id="page-3" class="page-3">
-        <h3>OUR TEAM</h3>
-        <div class="page-3__image">
-            <div class="page-3__image-picture"></div>
-            <div class="page-3__image-figure"></div>
+        <div class="page-3__title">
+            <h3>OUR TEAM</h3>
         </div>
-        <div class="page-3__text">
-            <h2>MASTER CHEF</h2>
-            <div class="page-2__text-line"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+        <div class="page-3__content">
+            <div class="page-3__image">
+                <div class="page-3__image-picture">
+                </div>
+                <div class="page-3__image-figure figure">
+                </div>
+            </div>
+            <div class="page-3__text">
+                <h2>MASTER CHEF</h2>
+                <div class="page-3__text-line line"></div>
+                <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+                </p>
 
-            </p>
-
-            <p>Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. 
-                Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. 
-                Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
-            </p>
+                <p class="simple-text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. 
+                    Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. 
+                    Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+                </p>
+            </div>
+        </div>
+        
     </div>
 
     <div id="page-4" class="page-4">
-        <div class="page-3__text">
+        <div class="page-4__text">
             <h2>BOOK A TABLE</h2>
-            <div class="page-2 text__line"></div>
+            <div class="page-4__text-line line"></div>
             <form method="POST">
+                <div class="form">
                 <input type="text" placeholder="Name" required>
-                <input type="text" placeholder="Phone" required>
-                <input type="text" placeholder="Date mm/dd" pattern="\d{1,2}/\d{1,2}" required>
                 <input type="text" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
-                <select aria-placeholder="People" size="4" required>
-                    <option selected>People</option>
+                <input type="text" placeholder="Phone" required>
+                <select required>
+                    <option class="first">People</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -162,7 +169,11 @@
                     <option>8</option>
                     <option>9</option>
                 </select>
-                <select aria-placeholder="Time" required>
+
+                <input type="text" placeholder="Date mm/dd" pattern="\d{1,2}/\d{1,2}" required>
+               
+                <select required>
+                    <option class="first">Time</option>
                     <option>8:00</option>
                     <option>8:30</option>
                     <option>9:00</option>
@@ -175,39 +186,48 @@
                     <option>2:00</option>
                     <option>3:00</option>
                 </select>
+                </div>
                 <button>BOOK NOW</button>
             </form>
         </div>    
         <div class="page-4__image">
             <div class="page-4__image-picture"></div>
-            <div class="page-4__image-figure"></div>
+            <div class="page-4__image-figure figure"></div>
         </div>
-        <p>Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729 131 637/+40 726 458 782</p>
+        <p class="page-4__time">Mon - Fri:<span class="bold">8PM - 10PM</span> , Sat - Sun:<span class="bold">8PM - 3AM</span>, <a href="tel:+40 729 131 637">Phone: +40 729 131 637/+40 726 458 782</a></p>
     </div>
 
     <div id="page-5" class="page-5">
-        <h3>SPECIALTIES</h3>
-        <div class="page-5__image">
-            <div class="page-5__image-picture"></div>
-            <div class="page-5__image-figure"></div>
+        <div class="page-5__title">
+            <h3>SPECIALTIES</h3>
         </div>
-        <div class="page-5__text">
-            <h2>CHOCOLATE PANCAKES</h2>
-            <div class="page-5__text-line"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
-            </p>
-
-            <p>Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. 
-                Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. 
-                Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
-            </p>
+        <div class="page-5__content">
+            <div class="page-5__image">
+            <div class="page-5__image-picture"></div>
+            <div class="page-5__image-figure figure"></div>
+            </div>
+            <div class="page-5__text">
+                <h2>CHOCOLATE PANCAKES</h2>
+                <div class="page-5__text-line line"></div>
+                <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+                </p>
+                <p class="simple-text">Integer ullamcorper neque eu purus euismod, ac faucibus mauris posuere. Morbi non ultrices ligula. 
+                    Sed dictum, enim sed ullamcorper feugiat, dui odio vehicula eros, a sollicitudin lorem quam nec sem. 
+                    Mauris tincidunt feugiat diam convallis pharetra. Nulla facilisis semper laoreet.
+                </p>
+            </div>
+        </div>
+        
     </div>
 
     <div id="page-6" class="page-6">
-        <h2>DELICIOUS MENU</h2>
-        <div class="page-5__text-line"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
-        </p>
+        <div class="page-6__title">
+            <h2>DELICIOUS MENU</h2>
+            <div class="page-5__text-line line"></div>
+            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+            </p>
+        </div>
+        
         <div class="page-6__menu">
             <nav>
                 <div><span>SOUPE</span></div>
@@ -228,11 +248,11 @@
         <h3>PRIVATE EVENTS</h3>
         <div class="page-7__left">
             <div class="page-7__left-black"></div>
-            <div class="page-7__figure-1"></div>
+            <div class="page-7__figure-1 figure"></div>
         </div>
         <div class="page-7__right">
             <div class="page-7__right-black"></div>
-            <div class="page-7__figure-2"></div>
+            <div class="page-7__figure-2 figure"></div>
         </div>
         <a href="tel:+40 729 131 637">
             <div class="page-7__contact">
@@ -250,7 +270,7 @@
     <div id="page-8" class="page-8">
         <h2>CONTACT</h2>
         <div class="page-8__text-line line"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
         </p>
         <form>
             <input type="text" placeholder="Name" required>
@@ -275,7 +295,11 @@
 
     <div class="page-9">
         <div class="page-9__map">
-
+            <div id="map"></div>
+                <script
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxxvsitopmfx7FeFcq8ZGmthj_EmqjanQ&callback=initMap&libraries=&v=weekly"
+                  async>
+                </script>
         </div>
         <footer>
             <span>© Copyright Mindblister  2019</span>
