@@ -97,6 +97,8 @@ a {
 .page-1__left-menu {
   width: 130px;
   height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .page-1__right {
@@ -135,13 +137,14 @@ a {
 
 .page-1__time {
   position: absolute;
-  top: 325px;
-  left: 80px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 12px;
   line-height: 12px;
-  text-align: center;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   height: 60px;
@@ -214,8 +217,10 @@ a {
 
 .page-1__media {
   position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 80px;
-  top: 325px;
   width: 60px;
   height: 220px;
   display: -webkit-box;

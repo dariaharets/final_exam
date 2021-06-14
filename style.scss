@@ -78,6 +78,7 @@ a {
         &-menu {
             width: 130px;
             height: 100px;
+            box-sizing: border-box;
         }
     }
 
@@ -108,13 +109,13 @@ a {
     }
     &__time{
         position: absolute;
-        top: 325px;
-        left: 80px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
         font-size: 12px;
         line-height: 12px;
-        text-align: center;
         transform: rotate(-90deg);
         height: 60px;
     }
@@ -170,8 +171,9 @@ a {
     }
     &__media{
         position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
         right: 80px;
-        top: 325px;
         width: 60px;
         height: 220px;
         display: flex;
@@ -502,6 +504,6 @@ a {
     &__title{
         text-align: center;
         color: $black;
-        
+
     }
 }
