@@ -103,4 +103,20 @@ $white: #FFFFFF;
             transition: 0.3s;
         }
     }
+    @media all and (min-width: 768px) and (max-width: 992px){
+        .page-3__content{
+            width: 95%;
+        }
+    }
+    @media all and (min-width: 330px) and (max-width: 768px){
+        .page-3__image{
+            display: none;
+        }
+        .page-3__content{
+            width: 80%;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+
 </style>

@@ -15,6 +15,10 @@
                 <div class="page-7__figure-2 figure"></div>
             </div>
         </div>
+        <div class="page-7__content-adaptive">
+            <button>WEDDINGS</button>
+            <button>CORPORATE PARTIES</button>
+        </div>
         
         <a href="tel:+40729131637">
             <div class="page-7__contact">
@@ -62,7 +66,26 @@ $white: #FFFFFF;
             text-align: center;
         }
     }
-    
+    &__content-adaptive{
+        display: none; 
+        margin: 0 auto;
+        button{
+            height: 60px;
+            width: 40%;
+            color: $white;
+            font-family: 'Dosis', sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            background-color: $yellow;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: $black;
+            border: solid 1px $white;
+        }
+    }
     &__content{
         width: 100%;
         display: flex;
@@ -188,6 +211,19 @@ $white: #FFFFFF;
         &-4{
             background-image: url(../../../assets/gallery/gal4.png);
         }
+    }
+}
+@media all and (min-width: 330px) and (max-width: 992px){
+    .page-7__content{
+        display: none;
+    }
+    .page-7__content-adaptive {
+        width: 100%;
+        display: flex;
+        height: 475px;
+        justify-content: space-evenly;
+        align-items: center; 
+        margin: 0 auto;
     }
 }
 </style>

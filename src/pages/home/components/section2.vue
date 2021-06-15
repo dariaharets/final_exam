@@ -72,4 +72,14 @@ $white: #FFFFFF;
         transition: 0.3s;
     }
 }
+@media all and (min-width: 330px) and (max-width: 768px){
+    .page-2__image{
+        display: none;
+    }
+    .page-2__text{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
 </style>

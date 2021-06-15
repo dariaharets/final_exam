@@ -1,6 +1,6 @@
 <template>
-  <div @scroll="handleScroll" class="wrapper">
-    <Section1 />
+  <div @scroll="handleScroll" class="wrapper" ref="wrapper">
+    <Section1 v-bind:scrollTop="scrollTop" />
     <Section2 />
     <Section3 />
     <Section4 />
@@ -36,14 +36,11 @@ export default {
     }
   },
   methods: {
-   
-    handleScroll(e) {
-      this.scrollTop = e.target.scrollHeight;
-      window.some = e.target
-      window.some2 = e.surrentTarget
-      // console.log(e.target, e.target.scrollTop, e.target.screenTop);
+    handleScroll() {
+      this.scrollTop = this.$refs.wrapper.scrollTop
     }
   },
+
   components: {
     Section1,
     Section2,
@@ -74,7 +71,9 @@ a {
   max-width: 1440px;
   margin: 0 auto;
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
+  height: 100vh,
 }
 
 .line {
@@ -112,6 +111,51 @@ a {
   border-radius: 5px;
   -webkit-filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
           filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+}
+
+@media all and (min-width: 1200px) and (max-width: 1440px) {
+  .page-1__logo{
+    height: 80px;
+    width: 80px;
+  }
+    .page-6__menu{
+      &-list{
+        grid-template-columns: 340px 340px 340px;
+        grid-column-gap: 50px;
+      }
+    }
+    .page-4{
+      justify-content: space-around;
+      &__text{
+        padding-left: 20px;
+      }
+      &__image{
+        display: none;
+      }
+    }
+    .page-8{
+      &__contacts{
+        width: 50%;
+      }
+      form{
+        input{
+          width: 30%;
+        }
+      }
+    }
+}
+@media screen and(max-width: 992px) {
+
+}
+
+@media screen and(max-width: 768px) {
+  
+}
+@media screen and(max-width: 500px) {
+
+}
+@media screen and(max-width: 330px) {
+
 }
 
 </style>

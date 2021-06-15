@@ -182,4 +182,28 @@ $white: #FFFFFF;
         }
     }
 }
+@media all and (min-width: 330px) and (max-width: 1200px){
+    .page-4{
+      justify-content: space-around;
+      &__text{
+        width: 80%;
+        margin: 0 auto;
+        .form{
+            grid-template-columns: 300px;
+            grid-row-gap: 10px;
+        }
+        button{
+            width: 80%;
+
+        }
+        
+      }
+      &__image{
+        display: none;
+      }
+      &__time{
+          display: none;
+      }
+    }
+}
 </style>

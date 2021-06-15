@@ -15,6 +15,7 @@
             
             <textarea placeholder="Message"></textarea>
             <div class="page-8__row">
+            <div class="page-8__contacts">
                 <a href="https://www.google.com/maps/search/5th+London+Boulevard/@62.4599075,7.6706633,14z">
                     <span><i class="fas fa-map-marker-alt"></i>  5th London Boulevard, U.K.</span>
                 </a>
@@ -24,6 +25,8 @@
                 <a href="mailto:office@mindblister.com">
                     <span><i class="fas fa-envelope"></i>  office@mindblister.com</span>
                 </a>
+            </div>
+                
             <button value="submit">SEND MESSAGE</button>
             </div>  
         </form>
@@ -54,12 +57,17 @@ $white: #FFFFFF;
             padding-top: 100px;
         }
         p{
-            width: 565px;
+            max-width: 565px;
+            width: 80%;
             margin: 0 auto;
         }
     }
+    &__contacts{
+        width: 50%;
+    }
     form{
-        width: 1280px;
+        max-width: 1280px;
+        width: 88%;
         height: 260px;
         margin: 50px auto;
         textarea{
@@ -89,7 +97,7 @@ $white: #FFFFFF;
         align-items: center;
         input{
             height: 60px;
-            width: 420px;
+            width: 33%;
             outline: none;
             background-color: $grey;
             font-family: 'Open Sans', sans-serif;
@@ -120,7 +128,7 @@ $white: #FFFFFF;
             color: $yellow;
         }
         button{
-            width: 640px;
+            width: 50%;
             height: 60px;
             background-color: $yellow;
             color: $white;
@@ -134,5 +142,10 @@ $white: #FFFFFF;
             font-size: 14px;
         }
     }    
+}
+@media all and (min-width: 330px) and (max-width: 992px){
+    .page-8__title{
+        margin: 20px auto;
+    }
 }
 </style>
