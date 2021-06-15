@@ -74,6 +74,7 @@ a {
   max-width: 1440px;
   margin: 0 auto;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .line {

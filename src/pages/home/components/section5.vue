@@ -102,7 +102,7 @@
     },
   };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 $yellow: #E8C300 ;
 $grey: #E5E5E5;
 $black: #000000;
@@ -110,6 +110,19 @@ $white: #FFFFFF;
 .splide__arrovs {
   display: none;
 }
+.splide__arrow{
+        display: none;
+    }
+.splide__pagination__page.is-active{
+  transform: none;
+  background-color: $white;
+
+}
+.splide{
+  padding: 0;
+  margin: 0 auto;
+}
+
 .page-5 {
   height: 675px;
   width: 100%;
@@ -117,6 +130,7 @@ $white: #FFFFFF;
   background-image: url(../../../assets/background/bg-5.png);
   background-repeat: no-repeat;
   background-size: cover;
+  
   &__title {
     width: 100%;
     height: 75px;

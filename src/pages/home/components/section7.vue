@@ -177,16 +177,16 @@ $white: #FFFFFF;
             border: 3px solid $yellow;
         }
         &-1{
-            background-image: url(/assets/gallery/gal1.png);
+            background-image: url(../../../assets/gallery/gal1.png);
         }
         &-2{
-            background-image: url(/assets/gallery/gal2.png);
+            background-image: url(../../../assets/gallery/gal2.png);
         }
         &-3{
-            background-image: url(/assets/gallery/gal3.png);
+            background-image: url(../../../assets/gallery/gal3.png);
         }
         &-4{
-            background-image: url(/assets/gallery/gal4.png);
+            background-image: url(../../../assets/gallery/gal4.png);
         }
     }
 }

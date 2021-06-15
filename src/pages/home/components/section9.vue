@@ -1,8 +1,16 @@
 <template>
-     <div class="page-9">
+    <div class="page-9">
         <div class="page-9__map">
-            <div id="map"></div>
-                <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxxvsitopmfx7FeFcq8ZGmthj_EmqjanQ&callback=initMap&libraries=&v=weekly" async></script>-->
+            <div id="map">
+                <GoogleMap id="map"
+                api-key="AIzaSyBxxvsitopmfx7FeFcq8ZGmthj_EmqjanQ"
+                :center="center"
+                :zoom="15"
+                >
+                    <Marker :options="{ position: center }" />
+                </GoogleMap>
+            </div>
+            
 
         </div> 
         <footer>
@@ -11,8 +19,15 @@
     </div>
 </template>
 <script>
+import { GoogleMap, Marker } from 'vue3-google-map'
 export default {
-  name: "Section9",
+    name: "Section9",
+    components: { GoogleMap, Marker },
+    setup() {
+        const center = { lat: 40.689247, lng: -74.044502 }
+
+        return { center }
+    },
 };
 
 </script>
