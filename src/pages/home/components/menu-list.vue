@@ -2,9 +2,9 @@
     
     <div class="page-6__menu-list">
         <MenuItem
-            v-for="menuItemData in menuItemList"
+            v-for="(menuItemData, index) in menuItemList"
             v-bind:menuItemData="menuItemData"
-            :key="menuItemData.title" />
+            v-bind:key="index" />
     </div>
 </template>
 

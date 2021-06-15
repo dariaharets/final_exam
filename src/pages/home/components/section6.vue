@@ -58,6 +58,8 @@ $white: #FFFFFF;
         }
     }
     &__menu{
+        margin: 0 auto;
+        width: 100%;
         nav{
             width: 840px;
             height: 50px;
@@ -103,6 +105,33 @@ $white: #FFFFFF;
                     }
             }
         }
+    }
+}
+@media all and (min-width: 992px) and (max-width: 1200px){
+     .page-6__menu{
+         margin: 0 auto;
+      &-list{
+        grid-template-columns: 340px 340px 340px;
+        grid-column-gap: 50px;
+        padding-left: 70px;
+        margin: 0 auto;
+      }
+    }
+}
+@media all and (min-width: 500px) and (max-width: 992px){
+    .page-6__menu{
+      &-list{
+        grid-template-columns: 230px 230px;
+        grid-column-gap: 20px;
+      }
+    }
+}
+@media all and (min-width: 330px) and (max-width: 500px){
+    .page-6__menu{
+      &-list{
+        grid-template-columns: 300px;
+        margin: 0 auto;
+      }
     }
 }
 </style>

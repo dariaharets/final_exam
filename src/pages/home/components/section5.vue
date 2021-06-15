@@ -35,7 +35,7 @@
                         <div class="page-5__image-figure figure"></div>
                     </div>
                     <div class="page-5__text">
-                        <h2>CHOCOLATE PANCAKES</h2>
+                        <h2>FRIED NOODLES</h2>
                         <div class="page-5__text-line line"></div>
                         <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
                         </p>
@@ -58,7 +58,7 @@
                         <div class="page-5__image-figure figure"></div>
                     </div>
                     <div class="page-5__text">
-                        <h2>CHOCOLATE PANCAKES</h2>
+                        <h2>CHICKEN WINGS</h2>
                         <div class="page-5__text-line line"></div>
                         <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus, molestie est a, tempor magna.
                         </p>
@@ -102,7 +102,7 @@
     },
   };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 $yellow: #E8C300 ;
 $grey: #E5E5E5;
 $black: #000000;
@@ -110,6 +110,19 @@ $white: #FFFFFF;
 .splide__arrovs {
   display: none;
 }
+.splide__arrow{
+        display: none;
+    }
+.splide__pagination__page.is-active{
+  transform: none;
+  background-color: $white;
+
+}
+.splide{
+  padding: 0;
+  margin: 0 auto;
+}
+
 .page-5 {
   height: 675px;
   width: 100%;
@@ -117,6 +130,7 @@ $white: #FFFFFF;
   background-image: url(../../../assets/background/bg-5.png);
   background-repeat: no-repeat;
   background-size: cover;
+  
   &__title {
     width: 100%;
     height: 75px;
@@ -173,6 +187,16 @@ $white: #FFFFFF;
     height: 200px;
     transform: rotate(90deg);
     transition: 0.3s;
+  }
+}
+@media all and (min-width: 330px) and (max-width: 768px){
+  .page-5__image{
+    display: none;
+  }
+  .page-5__text{
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
   }
 }
 </style>

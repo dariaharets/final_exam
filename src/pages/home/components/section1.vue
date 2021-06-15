@@ -1,5 +1,5 @@
 <template>
-  <div class="page-1">
+  <div class="page-1" v-bind:class="{scrolled: scrollTop >= 800}">
     <header>
       <div class="page-1__left">
         <a href="#">
@@ -22,9 +22,10 @@
             <span>BOOKING</span>
           </div>
         </a>
-      </div>
 
-      <a href="#"><div class="page-1__logo"></div></a>
+      </div>
+      <a href="#"><div class="page-1__logo" :style="style"></div></a>
+      <div class="page-1__logo logo-adaptive" :style="style" @click="menuOpened=!menuOpened"></div>
 
       <div class="page-1__right">
         <a href="#page-6">
@@ -75,6 +76,16 @@
               
           </div>
       </div>
+      <div class="opened-menu" v-bind:class="{opened: menuOpened}">
+        <p>HOME</p>
+        <p>ABOUT</p>
+        <p>TEAM</p>
+        <p>BOOKING</p>
+        <p>MENU</p>
+        <p>GALERIE</p>
+        <p>EVENTS</p>
+        <p>CONTACT</p>
+      </div>
       <a href="#page-2">
           <div class="scroll"></div>
       </a>
@@ -84,6 +95,22 @@
 <script>
 export default {
   name: "Section1",
+  props: ['scrollTop'],
+  data(){
+    return{
+      menuOpened: false
+    }
+  },
+  computed: {
+    style () {
+      const some = 150 - this.scrollTop / 10;
+      return `
+        width: ${(some < 50 ? 50 : some)}px;\n
+        height: ${(some < 50 ? 50 : some)}px;\n
+        transform: rotate(${this.scrollTop / 5}deg);
+      `;
+    },
+  }
 };
 </script>
 
@@ -102,7 +129,7 @@ $white: #FFFFFF;
     header{
         display: flex;
         width: 100%;
-        height: max-content;
+        height: 120px;
         justify-content: space-around;
         font-family: 'Open Sans', sans-serif;
         font-weight: 700;
@@ -116,19 +143,34 @@ $white: #FFFFFF;
         left: 0;
         z-index: 2;
     }
-    .srolled{
-      background-color: black;
+    &.scrolled {
+      header {
+        height: 100px;
+        padding: 0;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.486);
+      }
+      .page-1__left{
+        padding-top: 20px;
+        height: 40px;
+        a{
+          height: 40px;
+        }
+      }
+      .page-1__right{
+        padding-top: 20px;
+      } 
     }
 
     &__left {
         display: flex;
         justify-content: space-between;
-        width: 530px;
+        width: 37%;
         height: 100px;
         align-items: center;
         &-menu {
-            width: 130px;
-            height: 100px;
+            width: 25%;
+            height: 40px;
             box-sizing: border-box;
         }
         &-menu:hover{
@@ -140,11 +182,11 @@ $white: #FFFFFF;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 530px;
+        width: 37%;
         height: 100px;
         &-menu {
-            width: 130px;
-            height: 100px;
+            width: 25%;
+            height: 40px;
         }
         &-menu:hover{
             color: $yellow;
@@ -158,6 +200,10 @@ $white: #FFFFFF;
       background-repeat: no-repeat;
       background-position: center;
       padding-top: 25px;
+      background-size: contain;
+    }
+    .logo-adaptive {
+    display: none;
     }
     &__content {
         width: 100%;
@@ -276,5 +322,245 @@ $white: #FFFFFF;
         background-image: url(../../../assets/img/scroll.png);
         
     }
+  
+  }  
+
+.opened-menu.opened{
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  
+}
+.opened-menu {
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 150px;
+  width: 100vw;
+  background-color: $black;
+  color: $white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  display: none;
+}
+
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  .page-1__logo{
+    height: 100px;
+    width: 100px;
+    background-size: 100%;
+    padding-top: 0;
+    margin: 0 auto;
+  }
+  header{
+    margin-top: 25px;
+  }
+  .page-1__text{
+    h1{
+      font-size: 90px;
+    }
+  }
+}
+@media all and (min-width: 768px) and (max-width: 992px){
+  .page-1__logo{
+    background-size: 100%;
+    padding-top: 0;
+    margin: 0 auto;
+  }
+  header{
+    margin-top: 25px;
+  }
+  .page-1__text{
+    h1{
+      font-size: 75px;
+    }
+  }
+  .page-1__media{
+    display: flex;
+    flex-direction: row;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 60px;
+  }
+  .page-1__time{
+    display: none;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 768px){
+  .page-1__left{
+    display: none;
+  }
+  .page-1__right{
+    display: none;
+  }
+  header{
+    justify-content: space-between;
+  }
+  
+  
+  .scroll{
+     margin: 40px auto;
+  }
+  .page-1__logo{
+    display: none;
+  }
+  .page-1__logo.logo-adaptive {
+    display: block;
+  }
+  
+  header{
+    margin-top: 25px;
+  }
+  .page-1__text{
+    h1{
+      font-size: 75px;
+    }
+    &-buttons{
+      width: 400px;
+      justify-content: space-evenly;
+      button{
+        width: 150px;
+        height: 50px;
+      }
+    }
+  }
+  .page-1__media{
+    display: flex;
+    flex-direction: row;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 60px;
+  }
+  .page-1__time{
+    display: none;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 768px){
+  .page-1__left{
+    display: none;
+  }
+  .page-1__right{
+    display: none;
+  }
+  header{
+    justify-content: space-between;
+  }
+  .scroll{
+     margin: 40px auto;
+  }
+  .page-1__logo{
+    height: 80px;
+    width: 80px;
+    background-size: 100%;
+    padding-top: 0;
+    margin: 0 auto;
+  }
+  header{
+    margin-top: 25px;
+  }
+  .page-1__logo{
+    display: none;
+  }
+  .page-1__logo.logo-adaptive {
+    display: block;
+  }
+  .page-1__text{
+    h1{
+      font-size: 75px;
+    }
+    &-buttons{
+      width: 400px;
+      justify-content: space-evenly;
+      button{
+        width: 150px;
+        height: 50px;
+      }
+    }
+  }
+  .page-1__media{
+    display: flex;
+    flex-direction: row;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 60px;
+  }
+  .page-1__time{
+    display: none;
+  }
+}
+@media all and (min-width: 330px) and (max-width: 500px){
+   .page-1__logo{
+    height: 80px;
+    width: 80px;
+    background-size: contain;
+    padding-top: 0;
+    margin: 0 auto;
+  }
+  header{
+    margin-top: 25px;
+  }
+  .page-1__text{
+    h1{
+      font-size: 75px;
+    }
+  }
+  .page-1__media{
+    display: flex;
+    flex-direction: row;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 60px;
+  }
+  .page-1__time{
+    display: none;
+  }
+  .page-1__left{
+    display: none;
+  }
+  .page-1__right{
+    display: none;
+  }
+  .page-1__logo{
+    display: none;
+  }
+  .page-1__logo.logo-adaptive {
+    display: block;
+  }
+  header{
+    justify-content: space-between;
+  }
+  .burger{
+    display: block;
+  }
+  .scroll{
+     margin: 40px auto;
+  }
+  .page-1__text{
+    h1{
+      font-size: 60px;
+    }
+    &-buttons{
+      width: 150px;
+      flex-direction: column;
+      justify-content:center;
+      height: max-content;
+      button{
+        width: 150px;
+        height: 50px;
+      }
+    }
+  }
 }
 </style>
